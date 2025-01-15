@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: c2655766d89e6fc44a20baf645b5fcc1
+  productGUID: 6944fe747380e3149865caff05b66262
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: DP Study
+  productName: Personal_DP_STD
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -161,8 +161,7 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier:
-    Standalone: com.DefaultCompany.DP-Study
+  applicationIdentifier: {}
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -868,14 +867,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: DP Study
+  metroPackageName: Personal_DP_STD
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: DP Study
+  metroApplicationDescription: Personal_DP_STD
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -945,10 +944,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: ad59bc13-c04e-449c-85b4-5558e45df139
+  cloudProjectId: d9b52910-0c50-4b66-8878-0647d43d5e71
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: DP Study
+  projectName: Personal_DP_STD
   organizationId: munhwadong
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

@@ -1,7 +1,10 @@
-public enum NodeState
+namespace BT
 {
-    NONE,
-    SUCCESS,
-    FAILURE,
-    RUNNING,
+    public enum NodeState
+    {
+        NONE,
+        SUCCESS,
+        FAILURE,
+        RUNNING,
+    }
 }

@@ -1,27 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using BT;
 using UnityEngine;
 
-public class Selector : Node
+namespace BT
 {
-    private List<Node> _children = new List<Node>();
-
-    public void AddChild(Node child)
+    public class Selector : Node
     {
-        _children.Add(child);
-    }
-    
-    public override NodeState Evaluate()
-    {
-        foreach (var child in _children)
+        public override NodeState Evaluate()
         {
-            var result = child.Evaluate();
-
-            if (result == NodeState.SUCCESS)
+            if (runningNode != null)
             {
-                return NodeState.SUCCESS;
+                var result = runningNode.Evaluate();
+
+                if (result != NodeState.RUNNING)
+                {
+                    runningNode = null;
+                }
+                return result;
+            }
+            else
+            {
+                foreach (var child in _children)
+                {
+                    var result = child.Evaluate();
+
+                    if (result == NodeState.SUCCESS)
+                    {
+                        return NodeState.SUCCESS;
+                    }
+                    else if (result == NodeState.RUNNING)
+                    {
+                        runningNode = child;
+                        return NodeState.RUNNING;
+                    }
+                }
+                return NodeState.FAILURE;
             }
         }
-        return NodeState.FAILURE;
+
+        public void AddChild(Node node)
+        {
+            _children.Add(node);
+        }
+    
+        private readonly List<Node> _children = new List<Node>();
     }
+
 }

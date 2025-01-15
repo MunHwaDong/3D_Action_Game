@@ -1,20 +1,19 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using BT;
 
 public class BehaviourTree : MonoBehaviour
 {
-    private Node root;
-    
-    private MonsterController monsterController;
-
-    void Start()
+    public void Run<T>(MonsterController monster)
     {
-        monsterController = GetComponent<MonsterController>();
-        
-        root = BehaviourNodeFactory.CreateBehaviourNode<MonsterBehaviourNodeFactory>(monsterController);
+        _root = BehavioursFactory.CreateBehaviours<T>(monster);
     }
 
     void Update()
     {
-        root.Evaluate();
+        _root.Evaluate();
     }
+    
+    private Node _root;
 }
